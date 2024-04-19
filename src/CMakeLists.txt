@@ -25,13 +25,8 @@ if(APPLE)
         pendlerpauschale/CommuterBenefitCalculator.cpp
         exception/Exception.h
         exception/Exception.cpp
-        interest/Interest.h
-        interest/Interest.cpp
-        interest/InterestItem.h
-        interest/InterestMap.h
         percentage/PercentageCalculator.h
         percentage/PercentageCalculator.cpp
-        types/PayInterval.h
         yield/Yield.h
         yield/Yield.cpp)
 

@@ -51,8 +51,7 @@ double PercentageCalculator::calculateStartValue()
             throw Exception("Unable to calculate start value from end value equals 0.0");
         }
 
-        double difference = endValue * interestRate;
-        double startVal = endValue - difference;
+        double startVal = endValue / ((interestRate + 100) / 100);
 
         didValuesChange = false;
         startValue = startVal;
@@ -74,7 +73,7 @@ double PercentageCalculator::calculateEndValue()
             throw Exception("Unable to calculate end value from start value equals 0.0");
         }
 
-        double difference = startValue * interestRate;
+        double difference = startValue * (interestRate / 100);
         double endVal = startValue + difference;
 
         didValuesChange = false;
