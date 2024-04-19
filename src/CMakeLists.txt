@@ -20,7 +20,20 @@ include(${wxWidgets_USE_FILE})
 
 if(APPLE)
     # create bundle on apple compiles
-    add_executable(main MACOSX_BUNDLE ${SRCS} pendlerpauschale/CommuterBenefitCalculator.h pendlerpauschale/CommuterBenefitCalculator.cpp)
+    add_executable(main MACOSX_BUNDLE ${SRCS} 
+        pendlerpauschale/CommuterBenefitCalculator.h 
+        pendlerpauschale/CommuterBenefitCalculator.cpp
+        exception/Exception.h
+        exception/Exception.cpp
+        interest/Interest.h
+        interest/Interest.cpp
+        interest/InterestItem.h
+        interest/InterestMap.h
+        percentage/PercentageCalculator.h
+        percentage/PercentageCalculator.cpp
+        types/PayInterval.h
+        yield/Yield.h
+        yield/Yield.cpp)
 
     # Set a custom plist file for the app bundle - needed for Mac OS Retina display
     set_target_properties(main PROPERTIES MACOSX_BUNDLE_INFO_PLIST ${CMAKE_CURRENT_SOURCE_DIR}/Info.plist)
